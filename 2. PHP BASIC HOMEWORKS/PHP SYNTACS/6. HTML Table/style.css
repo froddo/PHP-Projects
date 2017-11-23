@@ -1,0 +1,15 @@
+table{
+	border-collapse:collapse;
+	width: 35%;
+}
+td{
+	border: 1px solid #000;
+
+}
+.right{
+	text-align: right;
+}
+.color{
+	background-color: #f08a24;
+	font-weight: bold;
+}

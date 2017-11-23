@@ -1,0 +1,15 @@
+/*HomeWork-2*/
+.green_text{background-color:#32CD32;}
+.gainsboro{background-color:#EFEFEF}
+table, td, th
+{
+border-collapse:collapse;
+border-style:none;
+border-right:5px inset #FFF;
+border-top:none;
+border-bottom:none;
+padding: 5px 30px 5px 5px;
+margin: 10px;
+}
+body{font-family:sans-serif;}
+img{width: 25px; height: 20px;}

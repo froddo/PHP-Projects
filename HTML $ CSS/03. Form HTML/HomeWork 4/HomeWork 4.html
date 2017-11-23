@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<title>HomeWork 4</title>
+<meta charset="utf-8" />
+<meta name="description" content="HomeWork 4" />
+<meta name="author" content="Rumen Topalov" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+<link href="styles.css" rel="stylesheet">
+<script type="text/javascript">
+function changeValue(type)
+{
+	var newValue = document.getElementById(type).value;
+	var divId = document.getElementById(type+"Number");
+	divId.innerText = newValue;
+}
+</script>
+</head>
+<body>
+<form method="post" action="">
+		<div id="nav">
+			<h2>
+				<a href="">Apple</a>
+				<a href="">Toshiba</a>
+				<a href="">Lenovo</a>
+				<a href="">Dell</a>
+				<a href="">Asus</a>
+				<a href="">HP</a>
+				<a href="">Aser</a>
+			</h2>
+		</div>
+		<table border="1" cellspacing="0" cellpadding="0">
+				<tr>
+				<td>
+		<table >
+				<tr>
+				<td>
+		<table border="1" cellspacing="0" cellpadding="0">
+				<tr>
+				<td>
+		<table>
+				<tr>
+				<td>
+		<fieldset>
+		<legend>Apple MackBook Air</legend>
+		<table>
+				<tr>
+					<td rowspan="2"><img src="picture\MacBook.jpg" alt="MackBook" width="120" height="100">
+					</td>
+					<td>64GB SSD</td>
+				</tr>
+				<tr>
+					<td>2GB DDR</td>
+				</tr>
+				<tr>
+					<td>1300 USD</td>
+					<td>Intel Core I5</td>
+				</tr>
+		</table>
+		</fieldset>
+				</td>
+				<td>
+		<fieldset>
+		<legend>Apple MackBook Air</legend>
+		<table>
+				<tr>
+					<td rowspan="2"><img src="picture\MacBook.jpg" alt="MackBook" width="120" height="100">
+					</td>
+					<td>64GB SSD</td>
+				</tr>
+				<tr>
+					<td>2GB SSD</td>
+				</tr>
+				<tr>
+					<td>1300 USD</td>
+					<td>Intel Core I5</td>
+				</tr>
+		</table>
+		</fieldset>
+				</td>
+				</tr>
+				<tr>
+				<td>
+		<fieldset>
+		<legend>Apple MackBook Air</legend>
+		<table>
+				<tr>
+					<td rowspan="2">
+					<img src="picture\MacBook.jpg" alt="MackBook" width="120" height="100">
+					</td>
+					<td>64GB SSD</td>
+				</tr>
+				<tr>
+					<td>2GB DDR</td>
+				</tr>
+				<tr>
+					<td>1300 USD</td>
+					<td>Intel Core I5</td>
+				</tr>
+		</table>
+		</fieldset>
+				</td>
+				<td>
+		<fieldset>
+		<legend>Apple MackBook Air</legend>
+		<table>
+				<tr>
+					<td rowspan="2">
+						<img src="picture\MacBook.jpg" alt="MackBook" width="120" height="100">
+					</td>
+					<td>64GB SSD</td>
+				</tr>
+				<tr>
+					<td>2GB DDR</td>
+				</tr>
+				<tr>
+					<td>1300 USD</td>
+					<td>Intel Core I5</td>
+				</tr>
+		</table>
+		</fieldset>
+				</td>
+				</tr>
+				<tr>
+				<td>
+		<fieldset>
+		<legend>Apple MackBook Air</legend>
+		<table>
+				<tr>
+					<td rowspan="2">
+					<img src="picture\MacBook.jpg" alt="MackBook" width="120" height="100">
+					</td>
+					<td>64GB SSD</td>
+				</tr>
+				<tr>
+					<td>2GB DDR</td>
+				</tr>
+				<tr>
+					<td>1300 USD</td>
+					<td>Intel Core I5</td>
+				</tr>
+		</table>
+		</fieldset>
+				</td>
+				<td>
+		<fieldset>
+		<legend>Apple MackBook Air</legend>
+		<table>
+				<tr>
+					<td rowspan="2">
+					<img src="picture\MacBook.jpg" alt="MackBook" width="120" height="100">
+					</td>
+					<td>64GB SSD</td>
+				</tr>
+				<tr>
+					<td>2GB DDR</td>
+				</tr>
+				<tr>
+					<td>1300 USD</td>
+					<td>Intel Core I5</td>
+				</tr>
+		</table>
+		</fieldset>
+					</td>
+					</tr>
+		</table>
+					</td>
+					</tr>
+		</table>
+					</td>
+						<td id="cellWithFilters">
+							<div class="divtext">
+								<span>Min Price:</span>
+								<span id="minPriceNumber">500</span>
+								<span>USD</span>
+							</div>
+							<div class="divtext">
+								<input id="minPrice" type="range" min="0" max="1000" value="500" onchange="changeValue('minPrice')" />
+							</div>
+							<div class="divtext">
+								<span>Max Price:</span>
+								<span id="maxPriceNumber">1500</span>
+								<span>USD</span>
+							</div>
+							<div class="divtext">
+								<input id="maxPrice" type="range" min="0" max="3000" value="1500" onchange="changeValue ('maxPrice')" />
+							</div>
+							<div class="divtext">
+								<span>Min RAM:</span>
+								<span id="minRAMNumber">4</span>
+								<span>GB</span>
+							</div>
+							<div class="divtext">
+								<input id="minRAM" type="range" min="0" max="8" value="4" onchange="changeValue('minRAM')" />
+							</div>
+							<div class="divtext">
+								<span>Max RAM:</span>
+								<span id="maxRAMNumber">16</span>
+								<span>GB</span>
+							</div>
+							<div class="divtext">
+								<input id="maxRAM" type="range" min="0" max="32" value="16" onchange="changeValue('maxRAM')" />
+							</div>
+						</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

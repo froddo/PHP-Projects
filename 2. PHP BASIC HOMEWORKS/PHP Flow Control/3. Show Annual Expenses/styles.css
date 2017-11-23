@@ -1,0 +1,8 @@
+table,th,td{
+    border-collapse: collapse;
+    border: 2px solid #c86260;
+    background-color: #ffffcc;
+    width: 50%;
+    border-spacing: 5px;
+    padding: 3px;
+}

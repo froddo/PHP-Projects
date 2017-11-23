@@ -1,0 +1,13 @@
+/*HomeWork3*/
+body{
+	width: 95%;
+}
+div{
+	width: 95%;
+	background-color: black;
+	border-radius: 60px;
+	border: 1px solid red;
+}
+.hidden{
+	display: none;
+}

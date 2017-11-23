@@ -1,0 +1,25 @@
+body div#main-background{
+	width: 423px;
+	border: 1px solid black;
+	background-color: #64b2e5;
+}
+body div#second-background{
+	width: 97%;
+	margin-right: 3px;
+	margin-left: 5px;
+	margin-bottom: 4px;
+	margin-top: -4px;
+	border: 1px solid black;
+	background-color: #d4ecf7;
+}
+.p:first-letter {
+	text-decoration:underline;
+}
+body div#color-background a {
+	text-decoration:none;
+	
+}
+body div#color-background{
+	background-color: white;
+	
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<title>Exercise 1</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="01. Homework" />
+	<meta name="author" content="Rumen Topalov" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<style type="text/css">
+	div
+	{
+	background-color:#b0e0e6;
+	text-align:center;
+	}
+	</style>
+	</head>
+<body>
+	<form action="" method="post">
+		<table border="1">
+			<tr>
+				<td><label for="fname"><b>First Name</b></label></td>
+				<td colspan="3">
+					<input type="text" id="fname" placeholder="Rumen">
+				</td>
+			</tr>
+			<tr>
+				<td><label for="lname"><b> Last Name</b></label></td>
+				<td colspan="3">
+					<input type="text" id="lname" placeholder="Topalov">
+				</td>
+			</tr>
+			<tr>
+				<td><label for="adress"><b>Adress</b></label></td>
+				<td colspan="3"> <textarea name="addres" cols="38" rows="5" placeholder="some addres here..."></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="City"><b>City</b></label></td>
+				<td><input type="text" id="city" placeholder="Sofia" /></td>
+				<td><label for="state"><b>State</b></label></td>
+				<td><input type="text" id="state" size="3" />
+				</td>
+			</tr>
+			<tr>
+				<td><label for="postal/zip code"><b>Zip/Postal Code</b></label></td>
+				<td colspan="3"><input type="post code" id="postal code" placeholder="1000" /></td>
+			</tr>
+			<tr>
+				<td><label for="country"><b>Country</b></label></td>
+				<td colspan="3">
+					<select name="country" id="country">
+						<option value="BG">Bulgaria</option>
+						<option value="USA">United Sates</option>
+						<option value="GBP">United Kingdom</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="phone"><b>Phone, (country code, area code, number)</b></label></td>
+				<td colspan="3">
+					<p>
+						&#40;&#43;<input type="text" id="phone" required="true" placeholder="359" size="3">
+						&#41;<input type="text"  placeholder="88" size="3">
+						&#45;<input type="text"  placeholder="8898776">
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="email"><b>Email</b></label></td>
+				<td colspan="3"><input type="text" name="email" placeholder="topalovr@gmail.com" size="35"/></td>
+			</tr>
+			<tr>
+				<td><label for="birth date"><b>Birth date</b></label></td>
+				<td colspan="3">
+					<label for="month">Month</label>
+					<input type="text" id="month" placeholder="01" size="2">
+					<label for="day">Day</label>
+					<input type="text" id="day" placeholder="18" size="2">
+					<label for="year">Year (4 digit)</label>
+					<input type="text" id="year" placeholder="1981" size="4">
+				</td>
+			</tr>
+			<tr>
+				<td><label for="gender"><b>Gender</b></label></td>
+				<td colspan="3">
+					<select name="gender" id="gender">
+						<option value="male">Male</option>
+						<option value="female">Female</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="starting date"><b>Starting date</b></label></td>
+				<td colspan="3">
+					<input name="starting date" type="radio" id="spring" value="spring">
+					<label for="spring">Spring 2009</label>
+					<input name="starting date" type="radio" id="summer" value="summer">
+					<label for="summer">Summer 2010</label>
+				</td>
+			</tr>
+			<tr>
+				<td><label for="comments/questions"><b>Comments/Questions</b></td>
+				<td colspan="3">
+					<textarea name="comments/questions" cols="38" rows="10" placeholder="Please send me for about the lodging..." ></textarea>
+				</td>
+			</tr>
+				<div class="color">
+					<tr>
+						<td colspan="4">
+							<div class="center">
+								<input type="submit" name="submit" value="Submit">
+								<input type="reset" value="Clear This Form">
+							</div>
+						</td>
+					</tr>
+				</div>
+		</table>
+	</form>
+</body>
+</html>

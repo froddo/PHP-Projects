@@ -1,0 +1,22 @@
+#header, header
+{
+	text-align:center;
+}
+/** navigation */
+#navigation ul, nav ul
+{
+	list-style-type:none;
+	display:block;	
+}
+#navigation ul li, nav ul li
+{
+	float:left;
+	margin: 5px;
+	padding:5px;
+}
+#navigation ul:after, nav ul:after
+{
+	clear:both;
+	display:block;
+	content:"";
+}

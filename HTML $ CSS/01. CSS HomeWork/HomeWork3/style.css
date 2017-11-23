@@ -1,0 +1,14 @@
+/*HomeWork3*/
+body{background-color:grey;}
+nav, ul, li, a{text-decoration:none;}
+.current{text-decoration:underline;}
+.index A:link{background-color:#D4D9DE;}
+header, nav, ul{list-style-type:none;}
+footer, h1 , nav, ul{text-align:center;}
+h1{color:#F7F1C0;}
+h2{color:#FAF6D7;}
+nav, ul, li  a:not(.small_text){color:#FCFAE8;
+ font-size:20px;font-family:"Times New Roman",Times,serif;}
+.small_text{font-size:10px;}
+.important {color:inherit;}
+footer{font-weight:bold;}
