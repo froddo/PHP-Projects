@@ -42,7 +42,7 @@ if ($_POST) {
 
 }
 
-$sq='SELECT author_name FROM `authors`';
+$sq='SELECT * FROM `authors`';
 $msq=mysqli_query($connect, $sq);
 ?>
 <a href="index.php">Книги</a>
@@ -55,12 +55,11 @@ $msq=mysqli_query($connect, $sq);
     <table border="1">
         <tr><td>Автори</td></tr>
 
-<?php while ($roww=$msq->fetch_assoc()){?>
-        <tr>
-            <td><a href="#"><?=$roww['author_name']?></a></td>
-        </tr>
+<?php while ($roww=$msq->fetch_assoc()) { ?>
 
-<?php }?>
+       <?php  echo "<tr><td><a href='index.php?author_id=".$roww['author_id']."'>".$roww['author_name']."</a></td></tr>" ?>
+
+<?php } ?>
     </table>
 <?php
 include 'footer.php';
