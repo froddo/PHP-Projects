@@ -39,6 +39,9 @@ while ($roww=$msq->fetch_assoc()) {
 
     $result['authors'][]=$roww;
 }
+if (count($result)==0){
+    echo '<p>Моля въведете автор</p>';
+}
 
 $result['title']='Нов автор';
 $result['header']='templates/authorHeader_public.php';
