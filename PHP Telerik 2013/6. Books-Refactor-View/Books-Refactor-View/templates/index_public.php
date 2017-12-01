@@ -1,3 +1,8 @@
+<?php
+if (!array_key_exists('books', $result)){
+    $result['books']=array();
+}
+?>
 <br>
    <table border="1">
        <tr>
