@@ -1,3 +1,8 @@
+<?php
+if (!array_key_exists('book', $result)){
+    $result['book']=array();
+}
+?>
 <form method="post" action="newBook.php">
     Име на книгата: <input type="text" name="name"><br>
     Търсене на книга: <input type="text" name="search"><br>
