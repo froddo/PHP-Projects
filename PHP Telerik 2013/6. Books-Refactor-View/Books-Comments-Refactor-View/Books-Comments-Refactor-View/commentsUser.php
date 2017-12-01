@@ -12,7 +12,7 @@ if ($con==false){
 $add=[];
 if (isset($_GET['user'])){
     $user=$_GET['user'];
-    $sql='SELECT `user`,`book_title`,`comment`,`dates` FROM comments WHERE `user`="'.$user.'"';
+    $sql='SELECT `user`,`book_title`,`comment`,`dates` FROM comments WHERE `user`="'.$user.'" ORDER BY `dates` DESC';
     $msq=mysqli_query($connect, $sql);
     while ($row=$msq->fetch_assoc()){
         $add['comment'][]=$row;
