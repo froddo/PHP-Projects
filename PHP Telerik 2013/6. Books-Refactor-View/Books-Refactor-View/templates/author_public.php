@@ -1,3 +1,9 @@
+<?php
+if (!array_key_exists('authors', $result)){
+$result['authors']=array();
+}
+?>
+
 <form method="post" action="newAuthor.php">
     Автор:  <input type="text" name="name">
     <input type="submit" name="submit" value="Добави">
