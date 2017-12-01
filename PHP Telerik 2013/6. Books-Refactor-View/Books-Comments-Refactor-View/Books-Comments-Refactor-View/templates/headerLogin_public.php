@@ -1,0 +1,1 @@
+<a href="register.php">Registration</a>
