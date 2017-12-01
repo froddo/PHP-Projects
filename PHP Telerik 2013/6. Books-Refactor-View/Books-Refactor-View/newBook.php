@@ -61,7 +61,9 @@ if (isset($_POST['name']) && $check==true){
 
     }
 }
-
+if (count($result)==0){
+    echo '<p>Моля въведете книга</p>';
+}
 $result['title']='Нова книга';
 $result['header']='templates/bookHeader_public.php';
 $result['content']='templates/book_public.php';
