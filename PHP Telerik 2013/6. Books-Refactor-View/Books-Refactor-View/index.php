@@ -39,6 +39,9 @@ while ($row=mysqli_fetch_assoc($msql)){
 if (isset($_GET['author_id']) && count($result) == 0){
   echo  '<p>Невалиден автор</p>';
 }
+if (count($result)==0){
+    echo '<p>Моля въведете автор и книга</p>';
+}
 
 $result['title']='Всички книги';
 $result['header']='templates/header_public.php';
