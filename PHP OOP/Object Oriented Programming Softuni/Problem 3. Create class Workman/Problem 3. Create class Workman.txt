@@ -1,0 +1,2 @@
+Problem 3. Create class Workman that has the same data as class User but also holds info about
+Profession:[ Electronics, Engine, Body Repair, Brake and Transmission, etc.] and payment per hour
