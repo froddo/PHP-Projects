@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+    <style type="text/css">
+        #cursor{
+            cursor: pointer;
+        }
+        p{
+            padding: 10px;
+            font: 10px sans-serif;
+            background: #f2f2f2;
+        }
+        p.someClass{
+            background: #ff67f0;
+        }
+        h3{
+            background: lightgreen;
+            display: none;
+        }
+        div{
+            margin: 20px 0;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p:first").text("hello");
+                $('input[type="text"]').css("background","blue");
+                $("form :password").css("background","yellow");
+                $(".mark").css("background","green");
+                $("ul.num li").css("background","brown");
+                $("ul#num li").css("background","purple");
+                $("form :button").css("background","green");
+                $("p:eq(0)").css("background","#ccc");
+                $("tr:odd").css("background","orange");
+                $("tr:even").css("background","yellow");
+                $("p:last").text("world").css("background","aquamarine");
+                $("p").click(function () {
+                   $(this).slideUp("slow");
+                });
+                $("p").mouseenter(function () {
+                    $(this).addClass("someClass");
+                });
+                $("p").mouseleave(function () {
+                    $(this).removeClass("someClass");
+                });
+                let i = 0;
+                $('input[type="text"]').keydown(function () {
+                    $('#tx').css("background","#CCA1BB");
+                    $("span").text(i += 1);
+                    $("h3").show().fadeOut();
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<ul class="num">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+</ul>
+<ul id="num">
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+</ul>
+<table border="1">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>John Smith</td>
+            <td>johnsmith@mail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Peter Parker</td>
+            <td>peterparker@mail.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Josh Wink</td>
+            <td>joshwink@mail.com</td>
+        </tr>
+    </tbody>
+</table>
+<p>This is a paragraph 1</p>
+<p id="cursor">This is a paragraph 2</p>
+<p class="mark">This is a paragraph 3</p>
+<p id="cursor">This is a paragraph 4</p>
+<p>This is a paragraph 5</p>
+<div>Keypress: <span>0</span></div>
+<h3>Keypress is triggered.</h3>
+<form>
+    <input id="tx" type="text" placeholder="Enter something...">
+    <label>Name: <input type="text"></label>
+    <label>Password: <input type="password"></label>
+    <button type="button">Go</button>
+</form>
+<h1>Note: Enter button GO</h1>
+</body>
+</html>

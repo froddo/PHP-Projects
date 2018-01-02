@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+    <script type="text/javascript" src="jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("tr:odd").css("background","yellow");
+            $("tr:even").css("background","orange");
+            $("p:first").css("background","blue");
+            $("p:last").css("background","green");
+            $("form :text").css("background","yellow");
+            $("form :password").css("background","purple");
+            $("form :submit").css("background","red");
+        });
+    </script>
+</head>
+<body>
+<table border="1">
+    <thead>
+        <tr>
+            <th>No.</th>
+            <th>Name</th>
+            <th>Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>John Smith</td>
+            <td>johnsmith@mail.com</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Peter Parker</td>
+            <td>peterparker@mail.com</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Josh Wink</td>
+            <td>joshwink@mail.com</td>
+        </tr>
+    </tbody>
+</table>
+<p>This is a paragraph 1</p>
+<p>This is a paragraph 2</p>
+<p>This is a paragraph 3</p>
+<p>This is a paragraph 4</p>
+<p>This is a paragraph 5</p>
+<form>
+    <label>Name: <input type="text"></label>
+    <label>Password: <input type="password"></label>
+    <input type="submit" value="Sing In">
+</form>
+</body>
+</html>
