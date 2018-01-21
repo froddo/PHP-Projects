@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Simple Calculator</title>
+    <style>
+        .container{
+            background-color: lightgrey;
+            width: 500px;
+            border: 10px solid gray;
+            padding: 100px;
+            margin: 50px;
+        }
+    </style>
+    <script src="jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $('#postForm').submit(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type:'POST',
+                    url:$(this).attr('action'),
+                    data:{
+                        val1:$('#num1').val(),
+                        val2:$('#num2').val(),
+                        result:$('#result').val()
+                    }
+                }).done(function (data) {
+                    $('#content').html(data);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div class="container">
+<form id="postForm" method="post" action="IndexClass.php">
+    <input type="text" id="num1">
+    <select name="chose" id="result">
+        <option id="plus" value="1">+</option>
+        <option id="minus" value="2">-</option>
+        <option id="multiplication" value="3">*</option>
+        <option id="division" value="4">/</option>
+    </select>
+    <input type="text" id="num2">
+    <input id="btn" type="submit" value="Go">
+</form>
+<div id="content">
+
+</div>
+</div>
+</body>
+</html>
