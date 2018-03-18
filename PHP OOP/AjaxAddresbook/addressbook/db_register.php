@@ -8,7 +8,7 @@ $post = filter_input_array(INPUT_POST,FILTER_SANITIZE_STRING);
 $password = md5($post['password']);
 
 if ($post['submit']){
-    //Insert into MySql
+    //Check if email exist in DB
     $db->query("SELECT * FROM `user` WHERE email = :email");
     $db->bind(':email', $post['email']);
 
@@ -17,6 +17,7 @@ if ($post['submit']){
         $error = "The email exist";
         header('Location: register.php?error='.urlencode($error));
     } else {
+    	//Register new user
         $db->query("INSERT INTO `user`(username, email, password) VALUES (:username, :email, :password)");
 
         $db->bind(':username', $post['username']);
