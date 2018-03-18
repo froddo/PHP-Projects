@@ -10,12 +10,15 @@ $password = md5($post['password']);
 if(isset($post['submit'])){
     //Compare Login
     $db->query("SELECT * FROM `user` WHERE email = :email AND password = :password");
-    $db->bind(':email', $_POST['email']);
+    $db->bind(':email', $post['email']);
     $db->bind(':password', $password);
 
     $row = $db->single();
 
     if ($row){
+            session_start();
+            $_SESSION['email']=$post['email'];
+
             header('Location: index.php');
     } else {
 

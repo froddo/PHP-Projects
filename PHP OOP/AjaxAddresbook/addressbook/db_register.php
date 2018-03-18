@@ -10,17 +10,17 @@ $password = md5($post['password']);
 if ($post['submit']){
     //Insert into MySql
     $db->query("SELECT * FROM `user` WHERE email = :email");
-    $db->bind(':email', $_POST['email']);
+    $db->bind(':email', $post['email']);
 
     $row = $db->single();
     if ($row){
-        $error = "Email exist";
+        $error = "The email exist";
         header('Location: register.php?error='.urlencode($error));
     } else {
         $db->query("INSERT INTO `user`(username, email, password) VALUES (:username, :email, :password)");
 
-        $db->bind(':username', $_POST['username']);
-        $db->bind('email', $_POST['email']);
+        $db->bind(':username', $post['username']);
+        $db->bind('email', $post['email']);
         $db->bind('password', $password);
         $db->execute();
 

@@ -1,15 +1,22 @@
-<?php session_start();
-
+<?php 
+session_start();
 include('core/init.php');
-
-
-if (!array_key_exists('login',$_SESSION)){
-    $_SESSION['login']=0;
-
+$db = new Database();
+if (!array_key_exists('email',$_SESSION)){
+    header('Location: login.php');
 } else {
-    header('Location: session.php');
+    $email = $_SESSION['email'];
 }
-$_SESSION['login']++;
+
+$db->query("SELECT * FROM `user` WHERE '$email' = :email");
+$db->bind(':email', $email);
+
+$row = $db->single();
+
+
+if (!$row){
+   header('Location: login.php');
+}
 
 ?>
 <!DOCTYPE html>
